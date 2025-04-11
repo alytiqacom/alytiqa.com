@@ -38,7 +38,7 @@ export function SignupForm() {
 
           try {
             const formData = new FormData(e.target as HTMLFormElement);
-            const response = await fetch("/", {
+            const response = await fetch("/__forms.html", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(formData as any).toString(),
