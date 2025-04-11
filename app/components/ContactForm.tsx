@@ -3,12 +3,15 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useFormState } from "react-dom";
-import { submitContactForm } from "../actions";
 import { Loader2 } from "lucide-react";
+import { useState } from "react";
 
 export function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, {
+  const [state, setState] = useState<{
+    success: boolean;
+    error: string | null;
+    pending: boolean;
+  }>({
     success: false,
     error: null,
     pending: false,
@@ -24,7 +27,44 @@ export function ContactForm() {
 
   return (
     <div className="flex flex-col gap-4 w-full">
-      <form action={formAction} className="space-y-4">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        className="space-y-4"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setState({ ...state, pending: true });
+
+          try {
+            const formData = new FormData(e.target as HTMLFormElement);
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData as any).toString(),
+            });
+
+            if (response.ok) {
+              setState({ success: true, error: null, pending: false });
+            } else {
+              throw new Error("Form submission failed");
+            }
+          } catch (error) {
+            setState({
+              success: false,
+              error: "Failed to submit form",
+              pending: false,
+            });
+          }
+        }}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+            Don't fill this out: <input name="bot-field" />
+          </label>
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Input
             type="text"

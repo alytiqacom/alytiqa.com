@@ -2,12 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useFormState } from "react-dom";
-import { submitSignupForm } from "../actions";
 import { Loader2 } from "lucide-react";
+import { useState } from "react";
 
 export function SignupForm() {
-  const [state, formAction] = useFormState(submitSignupForm, {
+  const [state, setState] = useState<{
+    success: boolean;
+    error: string | null;
+    pending: boolean;
+  }>({
     success: false,
     error: null,
     pending: false,
@@ -24,9 +27,43 @@ export function SignupForm() {
   return (
     <div className="flex flex-col gap-2 w-full">
       <form
-        action={formAction}
+        name="signup"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
         className="flex flex-col sm:flex-row gap-2 w-full"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setState({ ...state, pending: true });
+
+          try {
+            const formData = new FormData(e.target as HTMLFormElement);
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData as any).toString(),
+            });
+
+            if (response.ok) {
+              setState({ success: true, error: null, pending: false });
+            } else {
+              throw new Error("Form submission failed");
+            }
+          } catch (error) {
+            setState({
+              success: false,
+              error: "Failed to submit form",
+              pending: false,
+            });
+          }
+        }}
       >
+        <input type="hidden" name="form-name" value="signup" />
+        <p hidden>
+          <label>
+            Don't fill this out: <input name="bot-field" />
+          </label>
+        </p>
         <Input
           type="email"
           name="email"
