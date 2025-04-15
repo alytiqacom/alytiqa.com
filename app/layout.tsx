@@ -57,14 +57,6 @@ export const metadata = {
       "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
     url: "https://alytiqa.com",
     siteName: "Alytiqa",
-    images: [
-      {
-        url: "/images/brain.png",
-        width: 96,
-        height: 96,
-        alt: "Alytiqa - AI Web Analyst",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -73,7 +65,6 @@ export const metadata = {
     title: "Alytiqa - AI Web Analyst",
     description:
       "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
-    images: ["/images/brain.png"],
     creator: "@alytiqa",
   },
   alternates: {
