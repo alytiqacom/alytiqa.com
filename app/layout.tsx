@@ -22,6 +22,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://alytiqa.com"),
   title: "Alytiqa - AI Web Analyst",
   description:
     "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
