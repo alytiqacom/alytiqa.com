@@ -1,7 +1,7 @@
 import { Clock, LineChart, Lightbulb } from "lucide-react";
 import Image from "next/image";
-import { SignupForm } from "./components/SignupForm";
-import { ContactForm } from "./components/ContactForm";
+import { SignupForm } from "@/components/SignupForm";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -47,7 +47,7 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16 max-w-4xl">
           <h2 className="text-xl md:text-2xl font-heading text-center mb-12">
             We're building Alytiqa to help you:
           </h2>
