@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
           <h2 className="text-xl md:text-2xl font-heading mb-4">
-            Coming in 2025
+            Coming soon
           </h2>
           <p className="mb-6">Sign up for news and get invited to the pilot!</p>
           <div className="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
