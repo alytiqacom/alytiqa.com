@@ -15,9 +15,7 @@ export default function Home() {
             and everyone else working with analytics.
           </p>
           <h1 className="text-2xl md:text-4xl font-heading font-normal mb-12">
-            Save time and get better results with
-            <br />
-            Alytiqa, the AI web analyst.
+            Save time and get better results with Alytiqa, the AI web analyst.
           </h1>
           <div className="flex justify-center mb-12">
             <div className="relative w-auto h-auto">
@@ -37,9 +35,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <h2 className="text-xl md:text-2xl font-heading mb-4">
-            Coming soon
-          </h2>
+          <h2 className="text-xl md:text-2xl font-heading mb-4">Coming soon</h2>
           <p className="mb-6">Sign up for news and get invited to the pilot!</p>
           <div className="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
             <SignupForm />
@@ -95,7 +91,7 @@ export default function Home() {
         </section>
 
         {/* Powers Section */}
-        <section className="container mx-auto px-4 py-16 max-w-xl mx-auto">
+        <section className="container mx-auto px-4 py-16 max-w-xl">
           <h2 className="text-xl md:text-2xl font-heading text-center mb-8">
             The powers we're giving Alytiqa
           </h2>
@@ -119,7 +115,7 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section className="container mx-auto px-4 py-16 max-w-xl mx-auto">
+        <section className="container mx-auto px-4 py-16 max-w-xl">
           <h2 className="text-xl md:text-2xl font-heading text-center mb-8">
             How it works
           </h2>
