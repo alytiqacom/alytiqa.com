@@ -1,155 +1,169 @@
-import { Clock, LineChart, Lightbulb } from "lucide-react";
-import Image from "next/image";
-import { SignupForm } from "@/components/SignupForm";
-import { ContactForm } from "@/components/ContactForm";
+import { EarlyAccessForm } from "@/components/early-access-form"
+
+function SectionDivider() {
+  return <div className="w-12 h-px bg-border" />
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a3330] text-white">
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 pt-16 pb-12 text-center max-w-3xl">
-          <p className="text-sm md:text-base mb-6">
-            For web analysts, web managers, marketers,
-            <br />
-            and everyone else working with analytics.
-          </p>
-          <h1 className="text-2xl md:text-4xl font-heading font-normal mb-12">
-            Save time and get better results with Alytiqa, the AI web analyst.
-          </h1>
-          <div className="flex justify-center mb-12">
-            <div className="relative w-auto h-auto">
-              <Image
-                src="/images/brain.png"
-                alt="Brain icon"
-                width={96}
-                height={96}
-                style={{
-                  filter: "brightness(0) invert(1)",
-                  width: "auto",
-                  height: "auto",
-                  maxWidth: "96px",
-                  maxHeight: "96px",
-                }}
-                className="md:max-w-[120px] md:max-h-[120px]"
-              />
-            </div>
+    <main className="min-h-screen">
+      {/* Header */}
+      <header className="px-6 py-8 md:px-12 lg:px-24">
+        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
+          Alytiqa
+        </a>
+      </header>
+
+      {/* Hero */}
+      <section className="px-6 md:px-12 lg:px-24 pt-24 pb-32 md:pt-32 md:pb-40 max-w-3xl">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-balance text-foreground">
+          Growth intelligence, without human limits.
+        </h1>
+        <p className="mt-8 text-lg md:text-xl leading-8 text-body max-w-xl">
+          An intelligence platform built to deliver analyst-level growth
+          judgment at a speed and scale no human team can reach.
+        </p>
+        <a
+          href="#early-access"
+          className="inline-block mt-10 bg-primary text-primary-foreground px-8 py-3.5 text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+        >
+          Request early access
+        </a>
+      </section>
+
+      {/* Purpose */}
+      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 max-w-2xl">
+        <SectionDivider />
+        <h2 className="mt-10 text-2xl md:text-3xl font-light tracking-tight text-foreground">
+          Built to support better growth decisions.
+        </h2>
+        <p className="mt-6 text-base md:text-lg leading-8 text-body max-w-xl">
+          Growth decisions increasingly depend on interpreting complex signals
+          across products, markets, and customer behaviour.
+        </p>
+        <p className="mt-4 text-base md:text-lg leading-8 text-body max-w-xl">
+          Alytiqa is built to make sense of those signals with the discipline
+          of an experienced growth analyst, without the limits of human scope,
+          bias, or capacity.
+        </p>
+      </section>
+
+      {/* Starting Point */}
+      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 max-w-2xl">
+        <SectionDivider />
+        <h2 className="mt-10 text-2xl md:text-3xl font-light tracking-tight text-foreground">
+          Starting with website intelligence.
+        </h2>
+        <p className="mt-6 text-base md:text-lg leading-8 text-body max-w-xl">
+          {"Alytiqa\u2019s first release focuses on one critical surface: your website."}
+        </p>
+        <p className="mt-4 text-base md:text-lg leading-8 text-body max-w-xl">
+          It analyses website performance data, identifies meaningful patterns,
+          and delivers clear, reasoned recommendations to help teams understand
+          what is driving performance and where to focus next.
+        </p>
+      </section>
+
+      {/* How It Works */}
+      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 max-w-2xl">
+        <SectionDivider />
+        <h2 className="mt-10 text-2xl md:text-3xl font-light tracking-tight text-foreground">
+          Analysis first. Recommendations second.
+        </h2>
+        <p className="mt-8 text-base md:text-lg leading-8 text-body max-w-xl">
+          Alytiqa examines website data the way a disciplined analyst would,
+          looking beyond metrics to understand behaviour, context, and change
+          over time.
+        </p>
+        <p className="mt-6 text-base md:text-lg leading-8 text-body max-w-xl">
+          From this analysis, it produces recommendations you can evaluate and
+          act on, without automation, hype, or black box decisions.
+        </p>
+      </section>
+
+      {/* Differentiation */}
+      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 max-w-2xl">
+        <SectionDivider />
+        <div className="mt-10 space-y-16">
+          <div>
+            <h3 className="text-xl md:text-2xl font-light tracking-tight text-foreground">
+              Judgment over dashboards
+            </h3>
+            <p className="mt-3 text-base md:text-lg leading-8 text-body max-w-xl">
+              Insight designed to support decisions, not reporting.
+            </p>
           </div>
-          <h2 className="text-xl md:text-2xl font-heading mb-4">Coming soon</h2>
-          <p className="mb-6">Sign up for news and get invited to the pilot!</p>
-          <div className="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
-            <SignupForm />
+          <div>
+            <h3 className="text-xl md:text-2xl font-light tracking-tight text-foreground">
+              Patterns over anecdotes
+            </h3>
+            <p className="mt-3 text-base md:text-lg leading-8 text-body max-w-xl">
+              Recommendations grounded in performance patterns, not isolated
+              examples.
+            </p>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="container mx-auto px-4 py-16 max-w-4xl">
-          <h2 className="text-xl md:text-2xl font-heading text-center mb-12">
-            We're building Alytiqa to help you:
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-4">
-                <Clock className="w-12 h-12 stroke-1" />
-              </div>
-              <h3 className="text-lg font-heading font-normal mb-3">
-                Save hours
-              </h3>
-              <p className="text-sm">
-                Don't spend any more time trying to get your head around messy
-                analytics data or competitor analysis. Alytiqa will do it for
-                you and you'll get time for other important tasks.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-4">
-                <LineChart className="w-12 h-12 stroke-1" />
-              </div>
-              <h3 className="text-lg font-heading font-normal mb-3">
-                Get better results
-              </h3>
-              <p className="text-sm">
-                Alytiqa will go through all your analytics data regularly, find
-                the relevant patterns and changes, as well as relate it to your
-                website content, goals and competitors.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-4">
-                <Lightbulb className="w-12 h-12 stroke-1" />
-              </div>
-              <h3 className="text-lg font-heading font-normal mb-3">
-                Know how to act
-              </h3>
-              <p className="text-sm">
-                You'll get notified of any deviations, warning signs, and
-                potential improvements, including suggestions on what to change,
-                as well as general industry web trends.
-              </p>
-            </div>
+          <div>
+            <h3 className="text-xl md:text-2xl font-light tracking-tight text-foreground">
+              Focus over breadth
+            </h3>
+            <p className="mt-3 text-base md:text-lg leading-8 text-body max-w-xl">
+              A deliberately narrow starting point, chosen to build trust
+              before expanding.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Powers Section */}
-        <section className="container mx-auto px-4 py-16 max-w-xl">
-          <h2 className="text-xl md:text-2xl font-heading text-center mb-8">
-            The powers we're giving Alytiqa
-          </h2>
-          <ul className="space-y-4 list-disc pl-6">
-            <li>
-              To keep track of website metrics and behavioural patterns, detect
-              relevant changes, and explain them.
-            </li>
-            <li>
-              To keep track of all changes to a website as well as A/B tests and
-              campaigns, and evaluate how they affect KPIs.
-            </li>
-            <li>
-              To compare a website and its performance to competitors and
-              explain any differences.
-            </li>
-            <li>
-              To suggest what to change to improve conversion and other KPIs.
-            </li>
-          </ul>
-        </section>
+      {/* Audience */}
+      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 max-w-2xl">
+        <SectionDivider />
+        <h2 className="mt-10 text-2xl md:text-3xl font-light tracking-tight text-foreground">
+          For B2B growth teams who own outcomes.
+        </h2>
+        <div className="mt-10 flex flex-col md:flex-row gap-16 md:gap-24">
+          <div>
+            <p className="text-sm font-medium text-foreground mb-4">Built for</p>
+            <ul className="space-y-2.5 text-base text-body-secondary">
+              <li>Heads of Growth</li>
+              <li>Revenue and growth operations</li>
+              <li>Strategy teams supporting growth decisions</li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-foreground mb-4">Not built for</p>
+            <ul className="space-y-2.5 text-base text-body-secondary">
+              <li>Campaign-level optimisation</li>
+              <li>Generic analytics reporting</li>
+              <li>Automated growth tactics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        {/* How It Works Section */}
-        <section className="container mx-auto px-4 py-16 max-w-xl">
-          <h2 className="text-xl md:text-2xl font-heading text-center mb-8">
-            How it works
-          </h2>
-          <p className="mb-6 text-center">
-            Alytiqa will run your data through a multitude of AI and machine
-            learning models tailored to uncover relevant insights for your type
-            of website and industry. The findings are prioritized based on your
-            goals and presented to you in a report sent to your mailbox every
-            week or month.
-          </p>
-          <p className="text-center">
-            You get several days worth of work condensed in one page, with zero
-            effort. All you have to do is hook up your analytics via the API and
-            you're set to go.
-          </p>
-        </section>
+      {/* Early Access */}
+      <section
+        id="early-access"
+        className="px-6 md:px-12 lg:px-24 pt-24 pb-32 md:pt-32 md:pb-40 max-w-2xl"
+      >
+        <SectionDivider />
+        <h2 className="mt-10 text-2xl md:text-3xl font-light tracking-tight text-foreground">
+          Request early access
+        </h2>
+        <p className="mt-4 text-sm text-body-secondary">
+          Join a small group of B2B growth teams shaping the first release of
+          Alytiqa.
+        </p>
+        <div className="mt-10">
+          <EarlyAccessForm />
+        </div>
+      </section>
 
-        {/* Contact Section */}
-        <section className="container mx-auto px-4 py-16 max-w-md">
-          <h2 className="text-xl md:text-2xl font-heading text-center mb-8">
-            Contact us
-          </h2>
-          <ContactForm />
-        </section>
-
-        {/* Footer */}
-        <footer className="container mx-auto px-4 py-16 text-center">
-          <p className="text-lg md:text-xl font-heading max-w-xl mx-auto">
-            Solid insights that drive your business forward,
-            <br />
-            with minimum effort.
-          </p>
-        </footer>
-      </main>
-    </div>
-  );
+      {/* Footer */}
+      <footer className="px-6 md:px-12 lg:px-24 py-12 border-t border-border">
+        <p className="text-sm text-body-secondary">
+          {"\u00A9 2026 Alytiqa"}
+        </p>
+      </footer>
+    </main>
+  )
 }

@@ -1,100 +1,33 @@
-import type React from "react";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import type { Metadata, Viewport } from 'next'
+import { IBM_Plex_Sans } from 'next/font/google'
 
-// Import Nunito for body text
-import { Nunito } from "next/font/google";
+import './globals.css'
 
-// Try Manrope as an alternative to Nourd - it has a cleaner, lighter geometric style
-import { Manrope } from "next/font/google";
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-ibm-plex-sans',
+})
 
-const nunito = Nunito({
-  subsets: ["latin"],
-  variable: "--font-nunito",
-  display: "swap",
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-export const metadata = {
-  metadataBase: new URL("https://alytiqa.com"),
-  title: "Alytiqa - AI Web Analyst",
+export const metadata: Metadata = {
+  title: 'Alytiqa — Growth intelligence, without human limits',
   description:
-    "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
-  keywords:
-    "AI web analyst, website analytics, competitor analysis, automated insights, web performance, conversion optimization, digital marketing, web analytics",
-  authors: [{ name: "Alytiqa" }],
-  creator: "Alytiqa",
-  publisher: "Alytiqa",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  icons: {
-    icon: "/images/brain.png",
-    shortcut: "/images/brain.png",
-    apple: "/images/brain.png",
-  },
-  openGraph: {
-    title: "Alytiqa - AI Web Analyst",
-    description:
-      "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
-    url: "https://alytiqa.com",
-    siteName: "Alytiqa",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alytiqa - AI Web Analyst",
-    description:
-      "Save time and get better results with Alytiqa, the AI web analyst. Get automated insights, competitor analysis, and actionable recommendations for your website.",
-    creator: "@alytiqa",
-  },
-  alternates: {
-    canonical: "https://alytiqa.com",
-  },
-};
+    'An intelligence platform designed to deliver analyst-level growth judgment at a speed and scale no human team can match.',
+}
+
+export const viewport: Viewport = {
+  themeColor: '#05322E',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <SEO />
-      </head>
-      <body className={`${nunito.variable} ${manrope.variable} font-sans`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="en" className={ibmPlexSans.variable}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
-  );
+  )
 }
-
-import "./globals.css";
