@@ -6,37 +6,44 @@
   .text-balance {
     text-wrap: balance;
   }
-  /* Body copy hierarchy — standard / secondary */
+  /* Body copy on light background — #02302B-based */
   .text-body {
-    color: rgba(248, 251, 253, 0.90);
+    color: rgba(2, 48, 43, 0.88);
   }
   .text-body-secondary {
-    color: rgba(248, 251, 253, 0.77);
+    color: rgba(2, 48, 43, 0.65);
+  }
+  /* On dark (#02302B) sections */
+  .text-body-on-dark {
+    color: rgba(246, 246, 238, 0.92);
+  }
+  .text-body-secondary-on-dark {
+    color: rgba(246, 246, 238, 0.72);
   }
 }
 
 @layer base {
   :root {
-    /* Alytiqa palette: #05322E bg, #F8FBFD text */
-    --background: 172 85% 11%;
-    --foreground: 200 43% 98%;
-    --card: 172 70% 14%;
-    --card-foreground: 200 43% 98%;
-    --popover: 172 85% 11%;
-    --popover-foreground: 200 43% 98%;
-    --primary: 200 43% 98%;
-    --primary-foreground: 172 85% 11%;
-    --secondary: 172 50% 18%;
-    --secondary-foreground: 200 43% 98%;
-    --muted: 172 40% 20%;
-    --muted-foreground: 172 15% 60%;
-    --accent: 164 50% 40%;
-    --accent-foreground: 200 43% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 200 43% 98%;
-    --border: 172 30% 22%;
-    --input: 172 30% 22%;
-    --ring: 200 43% 98%;
+    /* Alytiqa MVP: #F6F6EEFF light, #02302B dark */
+    --background: 60 31% 95%;
+    --foreground: 172 92% 10%;
+    --card: 60 22% 94%;
+    --card-foreground: 172 92% 10%;
+    --popover: 60 31% 95%;
+    --popover-foreground: 172 92% 10%;
+    --primary: 172 92% 10%;
+    --primary-foreground: 60 31% 95%;
+    --secondary: 60 16% 91%;
+    --secondary-foreground: 172 92% 10%;
+    --muted: 60 12% 91%;
+    --muted-foreground: 172 22% 38%;
+    --accent: 172 35% 88%;
+    --accent-foreground: 172 92% 10%;
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 60 31% 95%;
+    --border: 172 12% 86%;
+    --input: 172 12% 86%;
+    --ring: 172 45% 28%;
     --radius: 0.375rem;
   }
 }

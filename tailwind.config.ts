@@ -63,7 +63,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-ibm-plex-sans)', 'IBM Plex Sans', 'sans-serif'],
+        sans: ['var(--font-source-sans-3)', 'Source Sans 3', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
