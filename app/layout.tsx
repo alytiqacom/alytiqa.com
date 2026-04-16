@@ -1,24 +1,26 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google'
 
 import './globals.css'
 
-const ibmPlexSans = IBM_Plex_Sans({
+const sourceSans3 = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-ibm-plex-sans',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-source-sans-3',
+  display: 'swap',
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
-  title: 'Alytiqa — Growth intelligence, without human limits',
+  title: 'Alytiqa — Recurring analysis, automated',
   description:
-    'An intelligence platform designed to deliver analyst-level growth judgment at a speed and scale no human team can match.',
+    'Alytiqa automates recurring analysis for growth and revenue teams. It all starts with website analytics for B2B SaaS.',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#05322E',
+  themeColor: '#02302B',
 }
 
 export default function RootLayout({
@@ -27,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={ibmPlexSans.variable}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={sourceSans3.variable}>
+      <body className={`${sourceSans3.className} antialiased`}>
         <Script
           id="matomo-tag-manager"
           strategy="beforeInteractive"

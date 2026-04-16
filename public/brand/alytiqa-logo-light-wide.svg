@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="75.768112mm"
+   height="25.000046mm"
+   viewBox="0 0 75.768112 25.000046"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <radialGradient
+       xlink:href="#linearGradient24"
+       id="radialGradient10-0-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.6084399,0,0,6.6084399,-1267.238,-1400.4465)"
+       cx="222.7854"
+       cy="248.94034"
+       fx="222.7854"
+       fy="248.94034"
+       r="3.4808879" />
+    <linearGradient
+       id="linearGradient24">
+      <stop
+         style="stop-color:#f6f6eeff;stop-opacity:1;"
+         offset="0.04434744"
+         id="stop22" />
+      <stop
+         style="stop-color:#7b8f8b;stop-opacity:0.47843137;"
+         offset="0.23198768"
+         id="stop25" />
+      <stop
+         style="stop-color:#062d27;stop-opacity:0;"
+         offset="0.41505852"
+         id="stop24" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath67-4-0-7-6-1-4-5-9">
+      <rect
+         style="fill:#f6f6eeff;fill-opacity:0;stroke:#f6f6eeff;stroke-width:0.783238;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none"
+         id="rect67-9-4-6-2-05-8-2-3"
+         width="353.00726"
+         height="143.94814"
+         x="690.48053"
+         y="802.88538"
+         transform="matrix(0.99950604,0.03142743,-0.9922303,0.12441473,0,0)" />
+    </clipPath>
+  </defs>
+  <g
+     id="g3"
+     style="display:inline"
+     transform="translate(-66.132907,-49.871337)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:26.6525px;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3 Light';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#02302b;fill-opacity:1;stroke:#f6f6eeff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:0;stroke-opacity:1"
+       x="144.00655"
+       y="69.034485"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-size:26.6525px;text-align:end;text-anchor:end;fill:#fafaf5;fill-opacity:1;stroke:#fafaf5;stroke-width:0;stroke-opacity:1"
+         x="144.00655"
+         y="69.034485">lytiqa</tspan></text>
+    <g
+       id="g108-5-5-7-5"
+       style="display:inline;fill:#02302b;fill-opacity:1;stroke:#f6f6eeff;stroke-opacity:1"
+       transform="matrix(1.7213174,0,0,1.7213174,-77.146243,25.000861)">
+      <path
+         id="path7-9-7"
+         style="display:inline;fill:url(#radialGradient10-0-8);fill-opacity:1;stroke:#02302b;stroke-width:0;stroke-opacity:1"
+         d="m 215.29222,265.19873 -10.26556,-20.53441 -10.26892,20.53099 a 23.003239,23.003239 0 0 0 10.26892,2.46902 23.003239,23.003239 0 0 0 10.26556,-2.4656 z"
+         transform="matrix(0.44594192,0,0,0.44594192,-3.0635853,-93.870216)" />
+      <path
+         id="path3-1-0-36-3-16-9-0-59-5-0-3-0-9-0-2-4-9-2-9-6-0-0-2"
+         clip-path="url(#clipPath67-4-0-7-6-1-4-5-9)"
+         style="display:inline;fill:#f6f6eeff;fill-opacity:1;stroke:#f6f6eeff;stroke-width:0;stroke-linecap:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="m 71.052803,128.51874 -12.382221,21.44455 24.763286,1e-5 z m 0,0 -37.034072,11.50882 10.785615,0.33609 z m 0,0 -69.5000342,10.49714 10.0157352,0.31187 z m 0,0 -102.305471,9.47478 10.02786,0.31226 z m 0,0 -135.656491,8.43526 10.834111,0.33761 z m 0,0 -280.888483,12.2233 14.83399,1.24504 z m -225.260883,14.00721 -2.37588,0.1477 14.30209,0.83922 6.01744,-0.42272 z m 55.25553,1.7374 -3.88435,0.35966 16.059101,0.63507 4.447372,-0.47208 z m 54.434376,1.71201 -3.353429,0.50605 17.718608,0.42699 2.256945,-0.41039 z m 53.940064,1.69604 -1.789422,0.55522 19.269512,0.21637 0.457497,-0.20758 z"
+         transform="matrix(0.02796177,-0.01531685,0.22300025,0.48713129,57.719944,-46.281382)" />
+    </g>
+  </g>
+</svg>
